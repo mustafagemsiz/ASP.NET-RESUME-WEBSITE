@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Admin Paneli</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    <!-- Bootstrap CSS CDN -->
+    <link href="AdminFiles/Css/Bootstrap/Bootstrap.min.css" rel="stylesheet" />
+    <!-- Our Custom CSS -->
+    <link href="AdminFiles/Css/style.css" rel="stylesheet" />
+    <!-- Font Awesome JS -->
+    <script src="AdminFiles/Js/Fontawesomejs/solid.js"></script>
+    <script src="AdminFiles/Js/Fontawesomejs/fontawesome.js"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Paneli</h3>
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="Hakkimda.aspx">
+                        <i class="fas fa-user"></i> <span>Hakkımda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Deneyim.aspx">
+                        <i class="fas fa-briefcase"></i> <span>Deneyimlerim</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Egitim.aspx">
+                       <i class="fas fa-graduation-cap"></i> <span>Eğitim Hayatım</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-laptop"></i> <span>Yeteneklerim</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-palette"></i> <span>Hobilerim</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-star"></i> <span>Sertifikalar</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="AdminFiles/Js/jQuery/slim.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="AdminFiles/Js/jQuery/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="AdminFiles/Js/jQuery/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

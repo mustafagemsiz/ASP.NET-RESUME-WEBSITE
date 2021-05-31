@@ -176,7 +176,7 @@ FROM     TBLEGITIM</CommandText>
               <Mapping SourceColumn="TARIH" DataSetColumn="TARIH" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteEducation" Modifier="Public" Name="DeleteEducation" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteEducation">
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteEducation" Modifier="Public" Name="DeleteEducation" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteEducation">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM TBLEGITIM WHERE ID=@ID</CommandText>
@@ -197,7 +197,7 @@ FROM     TBLEGITIM WHERE ID=@ID</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertEducation" Modifier="Public" Name="InsertEducation" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertEducation">
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertEducation" Modifier="Public" Name="InsertEducation" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertEducation">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [TBLEGITIM] ([BASLIK], [ALTBASLIK], [ACIKLAMA], [GNOT], [TARIH]) VALUES (@BASLIK, @ALTBASLIK, @ACIKLAMA, @GNOT, @TARIH)</CommandText>
@@ -230,7 +230,7 @@ FROM     TBLEGITIM WHERE ID=@ID</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBLHOBITableAdapter" GeneratorDataComponentClassName="TBLHOBITableAdapter" Name="TBLHOBI" UserDataComponentName="TBLHOBITableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="Db_PortfolioSite.dbo.TBLHOBI" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillInterest" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="ListInterests" GeneratorSourceName="FillInterest" GetMethodModifier="Public" GetMethodName="ListInterests" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="ListInterests" UserSourceName="FillInterest">
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="Db_PortfolioSite.dbo.TBLHOBI" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillHobby" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="ListHobby" GeneratorSourceName="FillHobby" GetMethodModifier="Public" GetMethodName="ListHobby" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="ListHobby" UserSourceName="FillHobby">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [TBLHOBI] ([HOBI]) VALUES (@HOBI)</CommandText>
@@ -252,7 +252,50 @@ FROM     TBLHOBI</CommandText>
               <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="HOBI" DataSetColumn="HOBI" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteHobby" Modifier="Public" Name="DeleteHobby" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteHobby">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM TBLHOBI WHERE ID=@ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Db_PortfolioSite.dbo.TBLHOBI" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="Db_PortfolioSite.dbo.TBLHOBI" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill_Hobby" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="List_Hobby" GeneratorSourceName="Fill_Hobby" GetMethodModifier="Public" GetMethodName="List_Hobby" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="List_Hobby" UserSourceName="Fill_Hobby">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, HOBI
+FROM     TBLHOBI WHERE ID=@ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Db_PortfolioSite.dbo.TBLHOBI" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertHobby" Modifier="Public" Name="InsertHobby" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertHobby">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [TBLHOBI] ([HOBI]) VALUES (@HOBI)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="HOBI" ColumnName="HOBI" DataSourceName="Db_PortfolioSite.dbo.TBLHOBI" DataTypeServer="varchar(500)" DbType="AnsiString" Direction="Input" ParameterName="@HOBI" Precision="0" ProviderType="VarChar" Scale="0" Size="500" SourceColumn="HOBI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateHobby" Modifier="Public" Name="UpdateHobby" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateHobby">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE TBLHOBI SET HOBI=@HOBI WHERE ID=@ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="HOBI" ColumnName="HOBI" DataSourceName="Db_PortfolioSite.dbo.TBLHOBI" DataTypeServer="varchar(500)" DbType="AnsiString" Direction="Input" ParameterName="@HOBI" Precision="0" ProviderType="VarChar" Scale="0" Size="500" SourceColumn="HOBI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Db_PortfolioSite.dbo.TBLHOBI" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBLSERTIFIKATableAdapter" GeneratorDataComponentClassName="TBLSERTIFIKATableAdapter" Name="TBLSERTIFIKA" UserDataComponentName="TBLSERTIFIKATableAdapter">
             <MainSource>
@@ -278,11 +321,54 @@ FROM     TBLSERTIFIKA</CommandText>
               <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="SERTIFIKA" DataSetColumn="SERTIFIKA" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteCertificate" Modifier="Public" Name="DeleteCertificate" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteCertificate">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM TBLSERTIFIKA WHERE ID=@ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Db_PortfolioSite.dbo.TBLSERTIFIKA" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="Db_PortfolioSite.dbo.TBLSERTIFIKA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill_Certificate" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="List_Certificate" GeneratorSourceName="Fill_Certificate" GetMethodModifier="Public" GetMethodName="List_Certificate" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="List_Certificate" UserSourceName="Fill_Certificate">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, SERTIFIKA
+FROM     TBLSERTIFIKA WHERE ID=@ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Db_PortfolioSite.dbo.TBLSERTIFIKA" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertCertificate" Modifier="Public" Name="InsertCertificate" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertCertificate">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [TBLSERTIFIKA] ([SERTIFIKA]) VALUES (@SERTIFIKA)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="SERTIFIKA" ColumnName="SERTIFIKA" DataSourceName="Db_PortfolioSite.dbo.TBLSERTIFIKA" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@SERTIFIKA" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="SERTIFIKA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateCertificate" Modifier="Public" Name="UpdateCertificate" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateCertificate">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE TBLSERTIFIKA SET SERTIFIKA=@SERTIFIKA WHERE ID=@ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="SERTIFIKA" ColumnName="SERTIFIKA" DataSourceName="Db_PortfolioSite.dbo.TBLSERTIFIKA" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@SERTIFIKA" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="SERTIFIKA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Db_PortfolioSite.dbo.TBLSERTIFIKA" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TBLYETENEKTableAdapter" GeneratorDataComponentClassName="TBLYETENEKTableAdapter" Name="TBLYETENEK" UserDataComponentName="TBLYETENEKTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="Db_PortfolioSite.dbo.TBLYETENEK" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillWorkflow" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="ListWorkflow" GeneratorSourceName="FillWorkflow" GetMethodModifier="Public" GetMethodName="ListWorkflow" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="ListWorkflow" UserSourceName="FillWorkflow">
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="Db_PortfolioSite.dbo.TBLYETENEK" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillSkill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="ListSkill" GeneratorSourceName="FillSkill" GetMethodModifier="Public" GetMethodName="ListSkill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="ListSkill" UserSourceName="FillSkill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [TBLYETENEK] ([YETENEK]) VALUES (@YETENEK)</CommandText>
@@ -304,7 +390,49 @@ FROM     TBLYETENEK</CommandText>
               <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="YETENEK" DataSetColumn="YETENEK" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteSkill" Modifier="Public" Name="DeleteSkill" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteSkill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM TBLYETENEK WHERE ID=@ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Db_PortfolioSite.dbo.TBLYETENEK" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="Db_PortfolioSite.dbo.TBLYETENEK" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill_Skill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="List_Skill" GeneratorSourceName="Fill_Skill" GetMethodModifier="Public" GetMethodName="List_Skill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="List_Skill" UserSourceName="Fill_Skill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, YETENEK FROM TBLYETENEK WHERE (ID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Db_PortfolioSite.dbo.TBLYETENEK" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertSkill" Modifier="Public" Name="InsertSkill" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertSkill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [TBLYETENEK] ([YETENEK]) VALUES (@YETENEK)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="YETENEK" ColumnName="YETENEK" DataSourceName="Db_PortfolioSite.dbo.TBLYETENEK" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@YETENEK" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="YETENEK" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Db_PortfolioSiteConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateSkill" Modifier="Public" Name="UpdateSkill" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateSkill">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE TBLYETENEK SET YETENEK=@YETENEK WHERE ID=@ID</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="YETENEK" ColumnName="YETENEK" DataSourceName="Db_PortfolioSite.dbo.TBLYETENEK" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@YETENEK" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="YETENEK" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="Db_PortfolioSite.dbo.TBLYETENEK" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />

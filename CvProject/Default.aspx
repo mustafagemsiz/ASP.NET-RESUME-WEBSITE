@@ -29,9 +29,13 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <span class="d-block d-lg-none">Mustafa Gemsiz</span>
+            <asp:Repeater ID="Repeater7" runat="server">
+                <ItemTemplate>
             <span class="d-none d-lg-block">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="https://lh3.googleusercontent.com/ogw/ADGmqu-IUoKfHUk6LSx0ltY1ceW5m7ZbAePoHQ-VZuM1Jg=s192-c-mo" alt="">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src='<%#Eval("FOTOGRAF") %>'' alt="">
             </span>
+                    </ItemTemplate>
+                </asp:Repeater>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -73,7 +77,7 @@
                         </h1>
                         <div class="subheading mb-5">
                             <asp:Label ID="Label3" runat="server" Text='<%#Eval("ADRES") %>'></asp:Label>
-                            ·w
+                            ·
                             <asp:Label ID="Label4" runat="server" Text='<%#Eval("TELEFON") %>'></asp:Label>
                             ·
            

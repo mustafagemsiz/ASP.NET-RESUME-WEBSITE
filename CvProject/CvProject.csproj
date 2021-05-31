@@ -1485,8 +1485,23 @@
     <Content Include="Files\vendor\jquery\jquery.min.js" />
     <Content Include="Files\vendor\jquery\jquery.slim.js" />
     <Content Include="Files\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Giris.aspx" />
+    <Content Include="giris.css" />
     <Content Include="Hakkimda.aspx" />
+    <Content Include="Hobi.aspx" />
+    <Content Include="HobiEkle.aspx" />
+    <Content Include="HobiGuncelle.aspx" />
+    <Content Include="HobiSil.aspx" />
+    <Content Include="Sertifika.aspx" />
+    <Content Include="SertifikaEkle.aspx" />
+    <Content Include="SertifikaGuncelle.aspx" />
+    <Content Include="SertifikaSil.aspx" />
+    <Content Include="Yonetici.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Yetenek.aspx" />
+    <Content Include="YetenekEkle.aspx" />
+    <Content Include="YetenekGuncelle.aspx" />
+    <Content Include="YetenekSil.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.Master.cs">
@@ -1495,6 +1510,9 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1564,6 +1582,13 @@
     <Compile Include="EgitimSil.aspx.designer.cs">
       <DependentUpon>EgitimSil.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Hakkimda.aspx.cs">
       <DependentUpon>Hakkimda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1571,7 +1596,98 @@
     <Compile Include="Hakkimda.aspx.designer.cs">
       <DependentUpon>Hakkimda.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Hobi.aspx.cs">
+      <DependentUpon>Hobi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hobi.aspx.designer.cs">
+      <DependentUpon>Hobi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HobiEkle.aspx.cs">
+      <DependentUpon>HobiEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HobiEkle.aspx.designer.cs">
+      <DependentUpon>HobiEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HobiGuncelle.aspx.cs">
+      <DependentUpon>HobiGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HobiGuncelle.aspx.designer.cs">
+      <DependentUpon>HobiGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HobiSil.aspx.cs">
+      <DependentUpon>HobiSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HobiSil.aspx.designer.cs">
+      <DependentUpon>HobiSil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sertifika.aspx.cs">
+      <DependentUpon>Sertifika.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sertifika.aspx.designer.cs">
+      <DependentUpon>Sertifika.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SertifikaEkle.aspx.cs">
+      <DependentUpon>SertifikaEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SertifikaEkle.aspx.designer.cs">
+      <DependentUpon>SertifikaEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SertifikaGuncelle.aspx.cs">
+      <DependentUpon>SertifikaGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SertifikaGuncelle.aspx.designer.cs">
+      <DependentUpon>SertifikaGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SertifikaSil.aspx.cs">
+      <DependentUpon>SertifikaSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SertifikaSil.aspx.designer.cs">
+      <DependentUpon>SertifikaSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici.aspx.cs">
+      <DependentUpon>Yonetici.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici.aspx.designer.cs">
+      <DependentUpon>Yonetici.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yetenek.aspx.cs">
+      <DependentUpon>Yetenek.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yetenek.aspx.designer.cs">
+      <DependentUpon>Yetenek.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YetenekEkle.aspx.cs">
+      <DependentUpon>YetenekEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YetenekEkle.aspx.designer.cs">
+      <DependentUpon>YetenekEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YetenekGuncelle.aspx.cs">
+      <DependentUpon>YetenekGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YetenekGuncelle.aspx.designer.cs">
+      <DependentUpon>YetenekGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YetenekSil.aspx.cs">
+      <DependentUpon>YetenekSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YetenekSil.aspx.designer.cs">
+      <DependentUpon>YetenekSil.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Files\.gitignore" />

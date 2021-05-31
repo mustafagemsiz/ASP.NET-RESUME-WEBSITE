@@ -11,16 +11,21 @@ namespace CvProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["KULLANICI"] == null)
+            {
+                Response.Redirect("~/Giris.aspx");
+            }
         }
 
         protected void Save_Click(object sender, EventArgs e)
         {
-            if(TxtTitle.Text!="" && TxtSubtitle.Text!="" && TxtDescription.Text!="" && TxtDate.Text != "")
+
+
+            if (TxtTitle.Text != "" && TxtSubtitle.Text != "" && TxtDescription.Text != "" && TxtDate.Text != "")
             {
-            DataSet1TableAdapters.TBLDENEYIMTableAdapter dt = new DataSet1TableAdapters.TBLDENEYIMTableAdapter();
-            dt.InsertExperience(TxtTitle.Text,TxtSubtitle.Text,TxtDescription.Text,TxtDate.Text);
-            Response.Redirect("Deneyim.aspx");
+                DataSet1TableAdapters.TBLDENEYIMTableAdapter dt = new DataSet1TableAdapters.TBLDENEYIMTableAdapter();
+                dt.InsertExperience(TxtTitle.Text, TxtSubtitle.Text, TxtDescription.Text, TxtDate.Text);
+                Response.Redirect("Deneyim.aspx");
             }
             else
             {

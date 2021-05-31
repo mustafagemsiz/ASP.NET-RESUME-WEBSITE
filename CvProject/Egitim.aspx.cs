@@ -11,6 +11,10 @@ namespace CvProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["KULLANICI"] == null)
+            {
+                Response.Redirect("~/Giris.aspx");
+            }
             DataSet1TableAdapters.TBLEGITIMTableAdapter dt = new DataSet1TableAdapters.TBLEGITIMTableAdapter();
             Repeater1.DataSource = dt.ListEducation();
             Repeater1.DataBind();

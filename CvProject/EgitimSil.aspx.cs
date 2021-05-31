@@ -11,6 +11,10 @@ namespace CvProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["KULLANICI"] == null)
+            {
+                Response.Redirect("~/Giris.aspx");
+            }
             byte id = Convert.ToByte(Request.QueryString["ID"]);
             if (id != 0)
             {
